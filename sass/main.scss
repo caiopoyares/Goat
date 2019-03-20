@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav {
+  display: flex;
+  padding: 0 10px;
+  color: white;
+  background-color: rgb(230, 141, 178);
+  min-width: 480px;
+}
+
+.logo {
+  padding: 1rem;
+  margin-right: auto;
+}
+
+.nav-items:nth-child(2),
+.nav-items:nth-child(3) {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-items:nth-child(2):hover .dropdown,
+.nav-items:nth-child(3):hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  box-shadow: 0 2px 4px  rgba(0,0,0,.1);
+  border-radius: 3px;
+  position: absolute;
+  display: none;
+  top: 100%;
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: .75rem 1.5rem;
+  color: black;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.nav-items {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.hero-image {
+  height: 400px;
+  background: url('img/hero-img.jpg') no-repeat;
+  background-position: 50% 55%;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  font-weight: lighter;
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &-title {
+    font-weight: normal;
+    font-size: 3rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
+  }
+
+  &-subtitle {
+    color: #ccc;
+    margin-top: .2rem;
+    font-size: 1.5rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.form {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  &-title {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  &-email-input {
+    font-family: inherit;
+    font-size: .9rem;
+    min-width: 200px;
+    padding: .5rem;
+    margin-right: .5rem;
+
+    &:focus {
+      outline: none;
+      border-color: #000;
+
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  &-btn {
+    font-family: inherit;
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+  }
+
+  hr {
+    margin: 0 auto;
+    width: 100px;
+    transition: ease-in .7s;
+  }
+
+  &:hover hr {
+    width: 300px;
+  }
+}
