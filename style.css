@@ -73,19 +73,13 @@ ul {
   .hero-text-title {
     font-weight: normal;
     font-size: 3rem; }
-    @media screen and (max-width: 900px) {
-      .hero-text-title {
-        font-size: 2rem; } }
   .hero-text-subtitle {
     color: #ccc;
     margin-top: .2rem;
     font-size: 1.5rem; }
-    @media screen and (max-width: 900px) {
-      .hero-text-subtitle {
-        font-size: 1rem; } }
 
 .form {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   margin-top: 3rem; }
   .form-title {
