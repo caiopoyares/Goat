@@ -67,4 +67,52 @@ const zion = new Dog('Zion', 'Chiuaua');
 /* const navbarItem = document.querySelector('.drop'); */
 
 
+const UI = (function() {
+  const DOMStrings = {
+    sliderBox: document.querySelector('.hero-images'),
+    sliderImages: document.querySelectorAll('.slider'),
+    sliderBtnPrev: document.querySelector('.btn-prev'),
+    sliderBtnPrev: document.querySelector('.btn-next')
+  }
 
+  return {
+    nextSlide: function(e) {
+        const current = document.querySelector('.current');
+        current.classList.remove('current');
+        if(current.nextElementSibling) {
+          current.nextElementSibling.classList.add('current');
+        } else {
+          console.log(DOMStrings.sliderImages[0])
+          //Slider images is a node list
+          DOMStrings.sliderImages[0].classList.add('current');
+      }
+    },
+    prevSlide: function(e) {
+      const current = document.querySelector('.current');
+      current.classList.remove('current');
+      if(current.previousElementSibling) {
+        current.previousElementSibling.classList.add('current');
+      } else {
+        //Slider images is a node list
+        const slides = DOMStrings.sliderImages;
+        slides[slides.length - 1].classList.add('current');
+    }
+  }
+}
+})();
+
+const controller = (function(ui) {
+
+  const loadEventListeners = () => {
+    document.querySelector('.btn-prev').addEventListener('click', ui.prevSlide);
+    document.querySelector('.btn-next').addEventListener('click', ui.nextSlide);
+  }
+
+  return {
+    init: function() {
+      loadEventListeners();
+    }
+  }
+})(UI);
+
+controller.init()
