@@ -1,10 +1,10 @@
 {
-  "name": "weird",
+  "name": "pink-project",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "watch:sass": "node-sass -w sass/main.scss style.css",
     "build:sass": "node-sass sass/main.scss style.css"
   },
   "author": "caio poyares",

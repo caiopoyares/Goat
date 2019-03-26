@@ -5,70 +5,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Pink Project</title>
 </head>
 
 <body>
-  <section class="navigation">
-    <div class="nav">
-      <div class="logo">MyLogo</div>
-      <ul class="navbar">
-        <li class="nav-items">Home</li>
-        <li class="nav-items drop">Produtos
-          <ul class="dropdown">
-            <li class="dropdown-item">Bolas</li>
-            <li class="dropdown-item">Adesivos</li>
-            <li class="dropdown-item">Tênis</li>
-            <li class="dropdown-item">Camisetas</li>
-          </ul>
-        </li>
-        <li class="nav-items drop">Serviços
-          <ul class="dropdown">
-            <li class="dropdown-item">Limpeza</li>
-            <li class="dropdown-item">Educação</li>
-            <li class="dropdown-item">Programação</li>
-            <li class="dropdown-item">Suporte</li>
-          </ul>
-        </li>
-        <li class="nav-items">Contato</li>
-      </ul>
-    </div>
-
-    <div class="hero clearfix">
-      <div class="hero-images">
-          <div class="slider slider-1 current">
-              <div class="hero-text">
-                  <h3 class="hero-text-title">Slider 1</h3>
-                  <p class="hero-text-subtitle">Wherever you are</p>
-                </div>
-          </div>
-          <div class="slider slider-2">
-              <div class="hero-text">
-                  <h3 class="hero-text-title">Slider 2</h3>
-                  <p class="hero-text-subtitle">Wherever you are</p>
-                </div>
-          </div>
-          <div class="slider slider-3">
-              <div class="hero-text">
-                  <h3 class="hero-text-title">Slider 3</h3>
-                  <p class="hero-text-subtitle">Wherever you are</p>
-                </div>
-          </div>
+  <!-- HEADER -->
+  <section class="header">
+    <!-- NAVBAR -->
+    <section class="navigation">
+      <div class="nav">
+        <div class="nav__logo"><a href="#">MyLogo</a></div>
+        <!-- mobile navbar -->
+        <div class="mobile-navbar">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="popup-menu">
+          <button class="close-popup">&times;</button>
+          <li class="mobile-navbar__items"><a href="#">Home</a></li>
+          <li class="mobile-navbar__items mobile-navbar__items--drop"><a href="#"><span>Produtos </span><i
+                class="fas fa-caret-down"></i></a>
+            <ul class="mobile-navbar__dropdown">
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 1</li>
+              </a>
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 2</li>
+              </a>
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 3</li>
+              </a>
+            </ul>
+          </li>
+          <li class="mobile-navbar__items mobile-navbar__items--drop"><a href="#"><span>Serviços </span><i
+                class="fas fa-caret-down"></i></a>
+            <ul class="mobile-navbar__dropdown">
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 1</li>
+              </a>
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 2</li>
+              </a>
+              <a href="#">
+                <li class="mobile-navbar__dropdown-item">Item 3</li>
+              </a>
+            </ul>
+          </li>
+          <li class="mobile-navbar__items"><a href="#">Contato</a></li>
+        </div>
+        <!-- desktop navbar -->
+        <ul class="desktop-navbar">
+          <li class="navbar__items"><a href="#">Home</a></li>
+          <li class="navbar__items navbar__items--drop"><a href="#">Produtos</a> <i class="fas fa-caret-down"></i>
+            <ul class="navbar__dropdown">
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 1</li>
+              </a>
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 2</li>
+              </a>
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 3</li>
+              </a>
+            </ul>
+          </li>
+          <li class="navbar__items navbar__items--drop"><a href="#">Serviços</a> <i class="fas fa-caret-down"></i>
+            <ul class="navbar__dropdown">
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 1</li>
+              </a>
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 2</li>
+              </a>
+              <a href="#">
+                <li class="navbar__dropdown-item">Item 3</li>
+              </a>
+            </ul>
+          </li>
+          <li class="navbar__items"><a href="#">Contato</a></li>
+        </ul>
       </div>
-      
-      <button class="arrow btn-next">&rarr;</button>
-      <button class="arrow btn-prev">&larr;</button>
+    </section>
+    <div class="header__mobile">
+      <div class="header__content">
+        <h3 class="header__title">Be mobile.</h3>
+        <p class="header__subtitle">Wherever you are</p>
+      </div>
     </div>
+    <div class="header__caroussel">
+      <div class="slide slide-1 current">
+        <div class="header__content">
+          <h3 class="header__title">Be a desktop.</h3>
+          <p class="header__subtitle">to take your time</p>
+        </div>
+      </div>
+      <div class="slide slide-2">
+        <div class="header__content">
+          <h3 class="header__title">Fall awake</h3>
+          <p class="header__subtitle">each and every time</p>
+        </div>
+      </div>
+      <div class="slide slide-3">
+        <div class="header__content">
+          <h3 class="header__title">Find yourself</h3>
+          <p class="header__subtitle">no matter what</p>
+        </div>
+      </div>
+    </div>
+    <button class="caroussel__btn caroussel__btn-next">&rarr;</button>
+    <button class="caroussel__btn caroussel__btn-prev">&larr;</button>
   </section>
 
 
-  <form class='form'>
-    <p class="form-title">Receba atualizações por email</p>
-    <div class="form-input">
-      <input class="form-email-input" type="email" placeholder="Email">
-      <button class="form-btn" type="submit">Cadastrar</button>
+
+  <!-- SUBSCRIBE FORM  -->
+  <form class='subscribe-form'>
+    <p class="subscribe-form__title">Receba atualizações por email</p>
+    <div class="subscribe-form__group">
+      <input class="subscribe-form__input" type="email" placeholder="Email">
+      <button class="subscribe-form__btn" type="submit">Cadastrar</button>
     </div>
     <hr>
   </form>
