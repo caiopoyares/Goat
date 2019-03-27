@@ -28,6 +28,15 @@ a {
   font-size: .8rem;
   padding-bottom: .2rem; }
 
+body {
+  transform: translateX(0px);
+  transition: all 1s;
+  overflow: auto; }
+
+body.active {
+  transform: translateX(300px);
+  overflow: hidden; }
+
 /* --------- SUMARIO ---------
   NAVBAR
   HEADER
@@ -49,66 +58,46 @@ a {
   color: white;
   background-color: transparent; }
 
-.mobile-navbar {
+.mobile-button {
   display: flex;
   align-items: center; }
   @media screen and (min-width: 599px) {
-    .mobile-navbar {
+    .mobile-button {
       display: none; } }
-  .mobile-navbar .fa-bars {
+  .mobile-button .fa-bars {
     cursor: pointer;
     font-size: 1.75rem;
     padding: 0 .5rem 0 .5rem; }
 
-.mobile-navbar__items {
-  color: #333;
-  font-size: 1.1rem;
-  display: block;
-  padding: 1rem 1rem; }
-  .mobile-navbar__items a:hover {
-    color: #6772e5; }
-
-.mobile-navbar__dropdown {
-  display: none; }
-
-.mobile-navbar__dropdown.active {
-  display: block;
-  margin-top: .5rem; }
-
-.mobile-navbar__dropdown.active .mobile-navbar__dropdown-item {
-  padding: .5rem 1rem;
-  font-size: .9rem; }
-
-.popup-menu {
-  display: none;
+.sidebar-menu {
   position: fixed;
-  z-index: 10;
-  padding: 1rem;
-  box-shadow: -2px 6px 12px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 30px);
-  left: 0;
+  z-index: 5;
   top: 0;
-  margin: 15px;
-  border-radius: 4px;
-  background-color: white; }
-
-.popup-menu.active {
-  display: block;
-  color: black; }
-  @media screen and (min-width: 599px) {
-    .popup-menu.active {
-      display: none; } }
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  transition: all 1s; }
+  .sidebar-menu > ul {
+    padding-top: 1rem; }
+  .sidebar-menu > ul > li {
+    padding: 1rem; }
+    .sidebar-menu > ul > li:hover {
+      cursor: pointer;
+      color: #ffc117; }
 
 .close-popup {
+  cursor: pointer;
   font-size: 2rem;
   border: none;
   position: absolute;
   right: 5px;
   top: 0;
+  background: transparent;
   color: #6772e5;
   transition: all .2s; }
   .close-popup:hover {
-    color: #393f88; }
+    color: #e68db2; }
   .close-popup:focus {
     outline: none; }
 
@@ -169,7 +158,7 @@ a {
         display: none; } }
   .header__caroussel {
     display: none;
-    height: 400px; }
+    height: 500px; }
     @media screen and (min-width: 599px) {
       .header__caroussel {
         display: block; } }

@@ -24,7 +24,7 @@
    //background-color: $color-main;
  }
 
- .mobile-navbar {
+ .mobile-button {
    display: flex;
    align-items: center;
 
@@ -39,66 +39,44 @@
    }
  }
 
- .mobile-navbar__items {
-   color: $color-dark;
-   font-size: 1.1rem;
-   display: block;
-   padding: 1rem 1rem;
 
-   & a:hover {
-     color: $color-secondary;
-   }
- }
+ .sidebar-menu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  transition: all 1s;
 
- .mobile-navbar__dropdown {
-   display: none;
- }
+  & > ul {
+    padding-top: 1rem;
+  }
 
- .mobile-navbar__dropdown.active {
-   display: block;
-   margin-top: .5rem;
- }
+  & > ul > li {
+    padding: 1rem;
 
- .mobile-navbar__dropdown.active .mobile-navbar__dropdown-item {
-   padding: .5rem 1rem;
-   font-size: .9rem;
-
- }
-
- .popup-menu {
-   display: none;
-   position: fixed;
-   z-index: 10;
-   padding: 1rem;
-   box-shadow: -2px 6px 12px rgba(0, 0, 0, .1);
-   width: calc(100% - 30px);
-   left: 0;
-   top: 0;
-   margin: 15px;
-   border-radius: 4px;
-   background-color: rgb(255, 255, 255);
- }
-
- .popup-menu.active {
-   display: block;
-   color: black;
-
-   @media screen and (min-width: $bp-sm) {
-     display: none;
-   }
- }
+    &:hover {
+      cursor: pointer;
+      color: rgb(255, 193, 23);
+    }
+  }
+}
 
  .close-popup {
+   cursor: pointer;
    font-size: 2rem;
    border: none;
    position: absolute;
    right: 5px;
    top: 0;
+   background: transparent;
    color: $color-secondary;
    transition: all .2s;
 
    &:hover {
-     color: $color-secondary-darker;
+     color: $color-main;
    }
 
    &:focus {
@@ -186,7 +164,7 @@
 
    &__caroussel {
      display: none;
-     height: 400px;
+     height: 500px;
 
      @media screen and (min-width: $bp-sm) {
        display: block;

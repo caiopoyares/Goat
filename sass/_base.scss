@@ -35,3 +35,15 @@ a {
   font-size: .8rem;
   padding-bottom: .2rem;
 }
+
+//This is used to display sidebar menu on  mobile
+body {
+  transform: translateX(0px);
+  transition: all 1s;
+  overflow: auto;
+}
+//This is used to display sidebar menu on  mobile
+body.active {
+  transform: translateX(300px);
+  overflow: hidden;
+}

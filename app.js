@@ -4,24 +4,15 @@ const UI = (function () {
     sliderImages: document.querySelectorAll('.slide'),
     sliderBtnPrev: document.querySelector('.caroussel__btn-prev'),
     sliderBtnPrev: document.querySelector('.caroussel__btn-next'),
-    mobileNavbar: document.querySelector('.mobile-navbar'),
-    mobileMenu: document.querySelector('.popup-menu')
+    mobileNavbar: document.querySelector('.mobile-button')
   }
 
   return {
-    dropdownMobileMenu: function(e) {
-      if(e.target.parentElement.parentElement.classList.contains('mobile-navbar__items--drop')) {
-        e.target.parentElement.parentElement.lastElementChild.classList.toggle('active');
-      }
-    },
     showMobileNavbar: function() {
-      //insert active class in .popup-menu element
-      DOMStrings.mobileMenu.classList.add('active');
+      document.querySelector('body').classList.add('active');
     },
-    closeMobileNavbar: function(e) {
-      e.stopPropagation();
-      // must use event delegation to remove popup
-      document.querySelector('.popup-menu').classList.remove('active');
+    closeMobileNavbar: function() {
+      document.querySelector('body').classList.remove('active');
     },
     nextSlide: function (e) {
       // current variable will change each time you click the button, so don't use DOMString
@@ -55,9 +46,8 @@ const controller = (function (ui) {
   const loadEventListeners = () => {
     document.querySelector('.caroussel__btn-prev').addEventListener('click', ui.prevSlide);
     document.querySelector('.caroussel__btn-next').addEventListener('click', ui.nextSlide);
-    document.querySelector('.mobile-navbar').addEventListener('click', ui.showMobileNavbar);
+    document.querySelector('.mobile-button').addEventListener('click', ui.showMobileNavbar);
     document.querySelector('.close-popup').addEventListener('click', ui.closeMobileNavbar);
-    document.querySelector('.popup-menu').addEventListener('click', ui.dropdownMobileMenu);
   }
 
   return {
