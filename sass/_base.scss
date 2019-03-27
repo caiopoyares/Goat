@@ -39,11 +39,11 @@ a {
 //This is used to display sidebar menu on  mobile
 body {
   transform: translateX(0px);
-  transition: all 1s;
+  transition: all .7s;
   overflow: auto;
 }
 //This is used to display sidebar menu on  mobile
 body.active {
-  transform: translateX(300px);
+  transform: translateX(250px);
   overflow: hidden;
 }

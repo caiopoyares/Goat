@@ -47,7 +47,7 @@ const controller = (function (ui) {
     document.querySelector('.caroussel__btn-prev').addEventListener('click', ui.prevSlide);
     document.querySelector('.caroussel__btn-next').addEventListener('click', ui.nextSlide);
     document.querySelector('.mobile-button').addEventListener('click', ui.showMobileNavbar);
-    document.querySelector('.close-popup').addEventListener('click', ui.closeMobileNavbar);
+    document.querySelector('.close-menu-btn').addEventListener('click', ui.closeMobileNavbar);
   }
 
   return {

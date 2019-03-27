@@ -21,7 +21,6 @@
    padding: 0 10px;
    color: white;
    background-color: transparent;
-   //background-color: $color-main;
  }
 
  .mobile-button {
@@ -44,27 +43,36 @@
   position: fixed;
   z-index: 5;
   top: 0;
-  left: -300px;
-  width: 300px;
+  left: -250px;
+  width: 250px;
   height: 100%;
   background-color: #333;
-  transition: all 1s;
+}
 
-  & > ul {
-    padding-top: 1rem;
-  }
+.mobile-menu__list {
+  margin-left: .5rem;
+  padding-top: 1rem;
+}
 
-  & > ul > li {
-    padding: 1rem;
+.mobile-menu__item {
+  padding: 1rem;
 
-    &:hover {
-      cursor: pointer;
-      color: rgb(255, 193, 23);
-    }
+  & a:hover, {
+    cursor: pointer;
+    color: $color-main;
   }
 }
 
- .close-popup {
+.mobile-menu__dropdown {
+  margin-top: .5rem;
+  margin-left: 1rem;
+}
+
+.dropdown__item {
+  padding: .5rem;
+}
+
+ .close-menu-btn {
    cursor: pointer;
    font-size: 2rem;
    border: none;
@@ -72,11 +80,11 @@
    right: 5px;
    top: 0;
    background: transparent;
-   color: $color-secondary;
+   color: $color-main;
    transition: all .2s;
 
    &:hover {
-     color: $color-main;
+     color: $color-main-darker;
    }
 
    &:focus {
@@ -130,10 +138,10 @@
 
  .navbar__dropdown-item {
    padding: .75rem 2rem .75rem 1rem;
-   color: black;
+   color: $color-dark;
 
    &:hover {
-     color: $color-secondary;
+     color: $color-main-darker;
    }
  }
 
@@ -269,9 +277,11 @@
  /* ------------ ALL SECTIONS ------------ */
  .section-title {
    text-align: center;
+   color: $color-secondary-darker;
    padding: 2rem 0;
    font-size: 1.5rem;
    text-transform: uppercase;
+   font-weight: 700;
  }
 
  /* ------------ BUTTONS ------------ */
@@ -372,7 +382,7 @@
    text-transform: uppercase;
    font-size: 1.1rem;
    letter-spacing: 1px;
-   background-color: $color-secondary;
+   background-color: $color-secondary-darker;
  }
 
  .pricing-card__subtitle {
@@ -461,7 +471,7 @@
      font-family: inherit;
      font-size: .8rem;
      text-transform: uppercase;
-     background-color: #222;
+     background-color: $color-secondary-darker;
      color: white;
      border: none;
      padding: 1rem 2rem;

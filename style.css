@@ -30,11 +30,11 @@ a {
 
 body {
   transform: translateX(0px);
-  transition: all 1s;
+  transition: all .7s;
   overflow: auto; }
 
 body.active {
-  transform: translateX(300px);
+  transform: translateX(250px);
   overflow: hidden; }
 
 /* --------- SUMARIO ---------
@@ -73,20 +73,29 @@ body.active {
   position: fixed;
   z-index: 5;
   top: 0;
-  left: -300px;
-  width: 300px;
+  left: -250px;
+  width: 250px;
   height: 100%;
-  background-color: #333;
-  transition: all 1s; }
-  .sidebar-menu > ul {
-    padding-top: 1rem; }
-  .sidebar-menu > ul > li {
-    padding: 1rem; }
-    .sidebar-menu > ul > li:hover {
-      cursor: pointer;
-      color: #ffc117; }
+  background-color: #333; }
 
-.close-popup {
+.mobile-menu__list {
+  margin-left: .5rem;
+  padding-top: 1rem; }
+
+.mobile-menu__item {
+  padding: 1rem; }
+  .mobile-menu__item a:hover {
+    cursor: pointer;
+    color: #f0c229; }
+
+.mobile-menu__dropdown {
+  margin-top: .5rem;
+  margin-left: 1rem; }
+
+.dropdown__item {
+  padding: .5rem; }
+
+.close-menu-btn {
   cursor: pointer;
   font-size: 2rem;
   border: none;
@@ -94,11 +103,11 @@ body.active {
   right: 5px;
   top: 0;
   background: transparent;
-  color: #6772e5;
+  color: #f0c229;
   transition: all .2s; }
-  .close-popup:hover {
-    color: #e68db2; }
-  .close-popup:focus {
+  .close-menu-btn:hover {
+    color: #e29b00; }
+  .close-menu-btn:focus {
     outline: none; }
 
 .desktop-navbar {
@@ -136,9 +145,9 @@ body.active {
 
 .navbar__dropdown-item {
   padding: .75rem 2rem .75rem 1rem;
-  color: black; }
+  color: #333; }
   .navbar__dropdown-item:hover {
-    color: #6772e5; }
+    color: #e29b00; }
 
 /* ------------ HEADER ------------ */
 .header {
@@ -237,9 +246,11 @@ body.active {
 /* ------------ ALL SECTIONS ------------ */
 .section-title {
   text-align: center;
+  color: #1a3745;
   padding: 2rem 0;
   font-size: 1.5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 700; }
 
 /* ------------ BUTTONS ------------ */
 .btn {
@@ -255,9 +266,9 @@ body.active {
 
 .primary-btn {
   color: white;
-  background-color: #e68db2; }
+  background-color: #f0c229; }
   .primary-btn:hover {
-    color: #e68db2;
+    color: #f0c229;
     background-color: #444; }
 
 /* ------------ PRICING SECTION ------------ */
@@ -320,7 +331,7 @@ body.active {
   text-transform: uppercase;
   font-size: 1.1rem;
   letter-spacing: 1px;
-  background-color: #6772e5; }
+  background-color: #1a3745; }
 
 .pricing-card__subtitle {
   color: #333333;
@@ -389,7 +400,7 @@ body.active {
     font-family: inherit;
     font-size: .8rem;
     text-transform: uppercase;
-    background-color: #222;
+    background-color: #1a3745;
     color: white;
     border: none;
     padding: 1rem 2rem; }
