@@ -10,7 +10,7 @@ html {
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 body {
@@ -41,6 +41,10 @@ a {
   vertical-align: middle;
 }
 
+::selection {
+  background-color: $color-pink;
+  color: $color-main;
+}
 
 
 
@@ -55,4 +59,17 @@ body {
 body.active {
   transform: translateX(250px);
   overflow: hidden;
+}
+
+//TRANSITION IMAGES
+.transition-img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60px);
+
+  &-2 {
+    transform: translate(-50%, -60px) rotate(180deg);
+  }
 }

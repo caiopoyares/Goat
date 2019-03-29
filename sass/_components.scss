@@ -24,8 +24,17 @@
  }
 
  .nav__logo {
-   color: $color-dark;
-   font-size: 1.2rem;
+   padding: 1rem;
+   margin-right: auto;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: $color-pink-light;
+   font-weight: 900;
+   font-size: 1.5rem;
+
+   &:focus {
+     outline: none;
+   }
  }
 
  .mobile-button {
@@ -51,10 +60,11 @@
    left: -250px;
    width: 250px;
    height: 100%;
-   background-color: #333;
+   background-color: $color-pink;
  }
 
  .mobile-menu__list {
+   font-weight: 500;
    margin-left: .5rem;
    padding-top: 1rem;
  }
@@ -98,21 +108,18 @@
 
  .desktop-navbar {
    display: none;
+   font-weight: 500;
 
    @media screen and (min-width: $bp-sm) {
      display: block;
    }
  }
 
- .nav__logo {
-   padding: 1rem;
-   margin-right: auto;
- }
-
  .navbar__items {
    display: inline-block;
    padding: 1rem;
    text-transform: uppercase;
+   cursor: pointer;
 
    &:hover {
      color: rgba(255, 255, 255, .5);
@@ -139,7 +146,7 @@
  .navbar__dropdown {
    position: absolute;
    background-color: #fff;
-   border: 1px solid #aaa;
+   //border: 2px solid $color-pink;
    min-width: max-content;
    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
    border-radius: 3px;
@@ -156,7 +163,8 @@
    font-size: .9rem;
 
    &:hover {
-     background-color: #eee;
+     background-color: $color-pink;
+     color: white;
    }
  }
 
@@ -168,53 +176,45 @@
    &__container {
      height: 70vh;
      width: 100%;
-     background-image: linear-gradient(to top, #f7f7f7 0, hsla(0, 0%, 97%, 0.534) 25%, hsla(0, 0%, 97%, 0.308) 30%, transparent 35%), url('img/hero-img.jpg');
+     background-image: linear-gradient(to top, #f7f7f7 0, hsla(0, 0%, 97%, 0.534) 15%, hsla(0, 0%, 97%, 0.308) 20%, transparent 25%), url('img/hero-img.jpg');
      background-repeat: no-repeat;
      background-position: 50% 26%;
      background-size: cover;
-   }
-
-   &__caroussel {
-     display: none;
-     height: 500px;
-
-     @media screen and (min-width: $bp-sm) {
-       display: block;
-     }
    }
  }
 
 
  .header__content {
-  background-color: rgba(0, 0, 0, 0.219);
-  border-radius: 4px;
-   padding: 1rem 3rem;
+   border-radius: 4px;
+   padding: 1rem 1rem;
    font-weight: lighter;
    position: absolute;
    text-align: center;
    color: white;
-   top: 65%;
+   top: 60%;
    left: 50%;
    transform: translate(-50%, -50%);
  }
 
  .header__pre-title {
    font-size: 1.5rem;
+   letter-spacing: 2px;
    color: $color-main;
    text-transform: uppercase;
-   font-weight: 700;
+   font-weight: 900;
  }
 
  .header__title {
-  color: white;
-   font-weight: 700;
+   color: white;
+   font-weight: 900;
    font-size: 5rem;
+   line-height: 5rem;
    text-transform: uppercase;
  }
 
  .header__subtitle {
    text-transform: capitalize;
-   font-size: 1.5rem;
+   font-size: 1.15rem;
    font-weight: 300;
  }
 
@@ -224,12 +224,20 @@
 
  /* ------------ ALL SECTIONS ------------ */
  .section-title {
+   font-family: $font-display;
    text-align: center;
    color: $color-secondary;
-   padding: 2rem 0;
-   font-size: 1.5rem;
-   text-transform: uppercase;
-   font-weight: 700;
+   padding: 0 0 .5rem;
+   font-size: 2rem;
+   font-weight: 900;
+   line-height: 2rem;
+ }
+
+ .section-subtitle {
+   text-align: center;
+   font-size: 1rem;
+   font-weight: 300;
+   line-height: 1.6rem;
  }
 
  /* ------------ BUTTONS ------------ */
@@ -246,30 +254,107 @@
  }
 
  .primary-btn {
-   color: white;
-   background-color: $color-pink;
+   color: $color-pink;
+   background-color: none;
+   border: 1px solid $color-pink;
 
    &:hover {
      color: $color-main;
-     background-color: #444;
+     background-color: $color-pink;
+   }
+ }
+
+ /* ------------ WELCOME SECTION ------------ */
+ .welcome {
+   background-color: $color-grey;
+
+   &__container {
+     text-align: center;
+     padding: 5rem .5rem;
+   }
+
+   &__title {
+     font-family: $font-display, sans-serif;
+     font-weight: 800;
+     font-size: 3.5rem;
+     color: #333;
+     line-height: 3rem;
+   }
+
+   &__subtitle {
+     color: transparent;
+     -webkit-text-stroke-fill: transparent;
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #333;
+     text-transform: uppercase;
+     font-size: 2rem;
+     font-weight: 700;
+     padding-bottom: 1rem;
+   }
+
+   &__text {
+     font-weight: 300;
+     line-height: 1.6rem;
+     max-width: 750px;
    }
  }
 
 
+ /* ------------ INTRO SECTION ------------ */
+ .intro {
+   background-color: white;
+   text-transform: none;
+   padding: 3rem 0;
+   padding-top: 5rem;
+
+   &__container {
+     padding: 0 .5rem;
+   }
+
+   &__title {
+     max-width: 400px;
+   }
+
+   &__subtitle {
+     max-width: 600px;
+   }
+
+   &__list {
+     text-align: center;
+     margin-top: 1rem;
+   }
+
+   &__list-item {
+     padding: .5rem 0;
+
+     &::before {
+       position: relative;
+       content: '→';
+       color: $color-secondary;
+       margin-right: .5rem;
+       transition: .5s;
+     }
+   }
+
+ }
 
  /* ------------ PRICING SECTION ------------ */
  .planos {
-   padding-top: 2rem;
-   background-color: #f7f7f7;
+   padding-top: 3rem;
+   padding-bottom: 5rem;
+   background-color: $color-grey;
    height: auto;
-
-   @media screen and (min-width: $bp-md) {
-     padding-bottom: 3rem;
-   }
  }
 
  .planos__container {
-   margin: 0 10px;
+   margin: 0 1rem;
+ }
+
+ .planos__text {
+   line-height: 1.6rem;
+   margin-bottom: 2rem;
+   text-align: center;
+   max-width: 650px;
  }
 
  .pricing__container {
@@ -281,13 +366,15 @@
 
    @media screen and (min-width: $bp-md) {
      flex-direction: row;
-     max-width: 51.5rem;
+     max-width: 57.5rem;
    }
  }
 
  .pricing-card {
+   display: flex;
+   flex-direction: column;
    width: 100%;
-   max-width: 23.75rem;
+   max-width: 25.75rem;
    margin-left: auto;
    margin-right: auto;
    background-color: white;
@@ -301,9 +388,13 @@
      color: #7c7c7c;
      font-size: 1rem;
      font-weight: 300;
+
+     &:last-of-type {
+       margin-bottom: 1rem;
+     }
    }
 
-   &>*:not(h2):not(:last-child) {
+   &>p:not(:last-of-type) {
      width: 80%;
      border-bottom: 1px solid #eee;
      margin-left: auto;
@@ -323,27 +414,34 @@
  }
 
  .pricing-card__title {
-   color: white;
    padding: 1rem .5rem;
    margin-bottom: .5rem;
    border-radius: 4px 4px 0 0;
-   font-weight: 300;
+   font-weight: 700;
    text-transform: uppercase;
    font-size: 1.1rem;
    letter-spacing: 1px;
-   background-color: $color-secondary;
+   color: $color-main;
+   background-color: $color-pink;
  }
 
  .pricing-card__subtitle {
-   color: #333333;
+   color: $color-secondary;
    font-size: 2rem;
    text-transform: uppercase;
    font-weight: 400;
-   padding: 1rem 0;
+   padding: 1rem 0 .5rem;
  }
 
  .small {
    font-size: .9rem;
+ }
+
+ .pricing-card .btn {
+   width: 80%;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: auto;
  }
 
  /* ----------------- PRODUCTS SECTION ------------------- */
@@ -356,7 +454,15 @@
  }
 
  .products {
-   padding-bottom: 2rem;
+   padding: 3rem 0;
+   padding-top: 5rem;
+ }
+
+ .products__text {
+   max-width: 600px;
+   margin-bottom: 3rem;
+   text-align: center;
+   padding: 0 1rem;
  }
 
  .product-card {
@@ -385,6 +491,7 @@
  .subscribe-form {
    max-width: 500px;
    margin: 0 auto;
+   padding: 0 1rem;
    margin-top: 3rem;
 
    &__title {
@@ -402,7 +509,6 @@
    &__input {
      font-family: inherit;
      font-size: .9rem;
-     min-width: 200px;
      padding: .5rem;
      margin-right: .5rem;
 
