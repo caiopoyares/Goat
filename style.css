@@ -62,6 +62,10 @@ body.active {
   color: white;
   background-color: transparent; }
 
+.nav__logo {
+  color: #333;
+  font-size: 1.2rem; }
+
 .mobile-button {
   display: flex;
   align-items: center; }
@@ -92,7 +96,7 @@ body.active {
   letter-spacing: 1px; }
   .mobile-menu__item a:hover {
     cursor: pointer;
-    color: #f0c229; }
+    color: #ffe926; }
 
 .mobile-menu__dropdown {
   margin-top: .5rem;
@@ -109,10 +113,8 @@ body.active {
   right: 5px;
   top: 0;
   background: transparent;
-  color: #f0c229;
+  color: white;
   transition: all .2s; }
-  .close-menu-btn:hover {
-    color: #e29b00; }
   .close-menu-btn:focus {
     outline: none; }
 
@@ -168,19 +170,13 @@ body.active {
 /* ------------ HEADER ------------ */
 .header {
   position: relative; }
-  .header__mobile {
-    height: 400px;
+  .header__container {
+    height: 70vh;
     width: 100%;
-    background-image: url("img/hero-img.jpg");
+    background-image: linear-gradient(to top, #f7f7f7 0, rgba(247, 247, 247, 0.534) 25%, rgba(247, 247, 247, 0.308) 30%, transparent 35%), url("img/hero-img.jpg");
     background-repeat: no-repeat;
+    background-position: 50% 26%;
     background-size: cover; }
-    .header__mobile .header__title {
-      font-size: 2.5rem; }
-    .header__mobile .header__subtitle {
-      font-size: 1.35rem; }
-    @media screen and (min-width: 599px) {
-      .header__mobile {
-        display: none; } }
   .header__caroussel {
     display: none;
     height: 500px; }
@@ -188,73 +184,34 @@ body.active {
       .header__caroussel {
         display: block; } }
 
-.slide {
-  display: none;
-  background-position: 50% 55%;
-  position: absolute;
-  background-size: cover;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-repeat: no-repeat;
-  transition: opacity .8s; }
-  @media screen and (min-width: 599px) {
-    .slide {
-      display: block; } }
-  .slide-1 {
-    background-image: url("img/hero-img.jpg"); }
-  .slide-2 {
-    background-image: url("img/hero-img-2.jpg"); }
-  .slide-3 {
-    background-image: url("img/hero-img-3.jpg"); }
-
 .header__content {
+  background-color: rgba(0, 0, 0, 0.219);
+  border-radius: 4px;
+  padding: 1rem 3rem;
   font-weight: lighter;
   position: absolute;
   text-align: center;
   color: white;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.header__pre-title {
+  font-size: 1.5rem;
+  color: #ffe926;
+  text-transform: uppercase;
+  font-weight: 700; }
+
 .header__title {
-  font-weight: normal;
-  font-size: 3rem; }
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase; }
 
 .header__subtitle {
-  color: #ccc;
-  margin-top: .2rem;
-  font-size: 1.5rem; }
-
-.caroussel__btn {
-  display: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  background: none;
-  border: 1px solid white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: .5rem;
-  margin: 0 2rem;
-  transition: all .4s; }
-  .caroussel__btn-prev {
-    left: 0; }
-  .caroussel__btn-next {
-    right: 0; }
-  .caroussel__btn:focus {
-    outline: none; }
-  .caroussel__btn:hover {
-    background-color: white;
-    color: #000; }
-  @media screen and (min-width: 599px) {
-    .caroussel__btn {
-      display: block; } }
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 300; }
 
 .current {
   opacity: 1; }
@@ -276,19 +233,20 @@ body.active {
   border-radius: 4px;
   border: none;
   margin: 1rem 0;
-  padding: .5rem 1rem;
+  padding: .7rem 2rem;
   text-transform: uppercase;
   transition: .1s; }
 
 .primary-btn {
   color: white;
-  background-color: #f0c229; }
+  background-color: #ff6a9c; }
   .primary-btn:hover {
-    color: #f0c229;
+    color: #ffe926;
     background-color: #444; }
 
 /* ------------ PRICING SECTION ------------ */
 .planos {
+  padding-top: 2rem;
   background-color: #f7f7f7;
   height: auto; }
   @media screen and (min-width: 750px) {
@@ -353,7 +311,8 @@ body.active {
   color: #333333;
   font-size: 2rem;
   text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 1rem 0; }
 
 .small {
   font-size: .9rem; }
