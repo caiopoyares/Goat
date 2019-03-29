@@ -31,11 +31,20 @@ a {
   color: inherit;
 }
 
+// ICONS FONTS
 .fas {
   font-size: .8rem;
   padding-bottom: .2rem;
 }
+.fa-caret-down {
+  margin-left: 5px;
+  vertical-align: middle;
+}
 
+
+
+
+// MOBILE SIDEBAR
 //This is used to display sidebar menu on  mobile
 body {
   transform: translateX(0px);
