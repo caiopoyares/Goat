@@ -24,16 +24,24 @@
  }
 
  .nav__logo {
-   padding: 1rem;
+   padding: .2rem .5rem;
+   margin: 1rem;
+   background-color: $color-pink-light;
    margin-right: auto;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-   color: $color-pink-light;
+   color: $color-main;
+   border: 2px solid $color-main;
    font-weight: 900;
    font-size: 1.5rem;
+   transition: transform .4s;
 
    &:focus {
      outline: none;
+   }
+
+   @media screen and (min-width: $bp-md) {
+     &:hover {
+       animation: logoAnimated 2s infinite;
+     }
    }
  }
 
@@ -263,6 +271,18 @@
      background-color: $color-pink;
    }
  }
+ 
+ .secondary-btn {
+   color: $color-pink;
+   background-color: $color-main;
+   border: 1px solid $color-pink;
+
+   &:hover {
+    color: $color-main;
+    background-color: $color-pink;
+    border-color: $color-pink;
+   }
+ }
 
  /* ------------ WELCOME SECTION ------------ */
  .welcome {
@@ -406,6 +426,10 @@
      max-width: 16.5rem;
      border-radius: 4px;
      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+     transition: transform .5s;
+     &:hover {
+      transform: scale(1.05);
+     }
 
      &:not(:last-child) {
        margin-right: 3%;
@@ -488,16 +512,46 @@
  }
 
  /* ------------ SUBSCRIBE FORM ------------ */
+ .subscribe {
+  position: relative;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  background-color: $color-pink-light;
+ }
+
  .subscribe-form {
    max-width: 500px;
    margin: 0 auto;
    padding: 0 1rem;
-   margin-top: 3rem;
+   text-align: center;
 
    &__title {
-     font-size: 1rem;
-     margin-bottom: 2rem;
-     text-align: center;
+     font-size: 2.5rem;
+     padding: .2rem .5rem;
+     display: inline-block;
+     border: 2px solid $color-secondary;
+     text-transform: uppercase;
+     position: relative;
+     font-family: $font-display;
+     font-weight: 800;
+     color: $color-secondary;
+     margin-bottom: 1rem;
+/*      left: 5%;
+     top: 25%; */
+     //transform: rotate(-30deg);
+
+     @media screen and (min-width: $bp-lg) {
+       position: absolute;
+       font-size: 3.25rem;
+       left: 10%;
+       top: 25%;
+       transform: rotate(-40deg);
+     }
+   }
+
+   &__subtitle {
+     font-size: 1.15rem;
+     color: white;
    }
 
    &__group {
@@ -510,6 +564,7 @@
      font-family: inherit;
      font-size: .9rem;
      padding: .5rem;
+     border: 2px solid $color-pink;
      margin-right: .5rem;
 
      &:focus {
@@ -519,27 +574,36 @@
      }
 
      &::placeholder {
-       color: #aaa;
+       color: #7c7c7c;
      }
+   }
+
+   &__hr {
+     background-color: $color-main;
+     margin-bottom: 0;
+     transition: width .5s;
+   }
+
+   &:hover .subscribe-form__hr {
+    width: 300px;
+    color: $color-main;
    }
 
    &__btn {
      font-family: inherit;
      font-size: .8rem;
+     font-weight: 800;
      text-transform: uppercase;
-     background-color: $color-secondary;
-     color: white;
-     border: none;
+     background-color: $color-pink;
+     color: $color-main;
+     border: 2px solid $color-main;
      padding: 1rem 2rem;
+
+     &:hover {
+       cursor: pointer;
+       color: $color-secondary;
+       border-color: $color-secondary;
+     }
    }
 
-   hr {
-     margin: 0 auto;
-     width: 100px;
-     transition: ease-in .7s;
-   }
-
-   &:hover hr {
-     width: 300px;
-   }
  }

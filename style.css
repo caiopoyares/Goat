@@ -1,4 +1,19 @@
 @charset "UTF-8";
+@keyframes logoAnimated {
+  0% {
+    background-color: #ff7da6;
+    color: #ffe926;
+    transform: scale(1); }
+  50% {
+    background-color: #ffe926;
+    color: #ff7da6;
+    border-color: #ff7da6;
+    transform: scale(1.2); }
+  100% {
+    background-color: #ff7da6;
+    color: #ffe926;
+    transform: scale(1); } }
+
 .capitalize {
   text-transform: capitalize; }
 
@@ -65,6 +80,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.btn {
+  cursor: pointer; }
+
 .fas {
   font-size: .8rem;
   padding-bottom: .2rem; }
@@ -117,15 +135,20 @@ body.active {
   background-color: transparent; }
 
 .nav__logo {
-  padding: 1rem;
+  padding: .2rem .5rem;
+  margin: 1rem;
+  background-color: #ff7da6;
   margin-right: auto;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ff7da6;
+  color: #ffe926;
+  border: 2px solid #ffe926;
   font-weight: 900;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  transition: transform .4s; }
   .nav__logo:focus {
     outline: none; }
+  @media screen and (min-width: 750px) {
+    .nav__logo:hover {
+      animation: logoAnimated 2s infinite; } }
 
 .mobile-button {
   display: flex;
@@ -307,6 +330,15 @@ body.active {
     color: #ffe926;
     background-color: #ff6a9c; }
 
+.secondary-btn {
+  color: #ff6a9c;
+  background-color: #ffe926;
+  border: 1px solid #ff6a9c; }
+  .secondary-btn:hover {
+    color: #ffe926;
+    background-color: #ff6a9c;
+    border-color: #ff6a9c; }
+
 /* ------------ WELCOME SECTION ------------ */
 .welcome {
   background-color: #f7f7f7; }
@@ -413,7 +445,10 @@ body.active {
       margin-top: 1rem;
       max-width: 16.5rem;
       border-radius: 4px;
-      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+      transition: transform .5s; }
+      .pricing-card:hover {
+        transform: scale(1.05); }
       .pricing-card:not(:last-child) {
         margin-right: 3%; } }
 
@@ -482,15 +517,40 @@ body.active {
   margin-top: .5rem; }
 
 /* ------------ SUBSCRIBE FORM ------------ */
+.subscribe {
+  position: relative;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  background-color: #ff7da6; }
+
 .subscribe-form {
   max-width: 500px;
   margin: 0 auto;
   padding: 0 1rem;
-  margin-top: 3rem; }
+  text-align: center; }
   .subscribe-form__title {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    text-align: center; }
+    font-size: 2.5rem;
+    padding: .2rem .5rem;
+    display: inline-block;
+    border: 2px solid #333;
+    text-transform: uppercase;
+    position: relative;
+    font-family: "EB Garamond";
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 1rem;
+    /*      left: 5%;
+     top: 25%; */ }
+    @media screen and (min-width: 999px) {
+      .subscribe-form__title {
+        position: absolute;
+        font-size: 3.25rem;
+        left: 10%;
+        top: 25%;
+        transform: rotate(-40deg); } }
+  .subscribe-form__subtitle {
+    font-size: 1.15rem;
+    color: white; }
   .subscribe-form__group {
     display: flex;
     justify-content: center;
@@ -499,23 +559,30 @@ body.active {
     font-family: inherit;
     font-size: .9rem;
     padding: .5rem;
+    border: 2px solid #ff6a9c;
     margin-right: .5rem; }
     .subscribe-form__input:focus {
       outline: none;
       border-color: #000; }
     .subscribe-form__input::placeholder {
-      color: #aaa; }
+      color: #7c7c7c; }
+  .subscribe-form__hr {
+    background-color: #ffe926;
+    margin-bottom: 0;
+    transition: width .5s; }
+  .subscribe-form:hover .subscribe-form__hr {
+    width: 300px;
+    color: #ffe926; }
   .subscribe-form__btn {
     font-family: inherit;
     font-size: .8rem;
+    font-weight: 800;
     text-transform: uppercase;
-    background-color: #333;
-    color: white;
-    border: none;
+    background-color: #ff6a9c;
+    color: #ffe926;
+    border: 2px solid #ffe926;
     padding: 1rem 2rem; }
-  .subscribe-form hr {
-    margin: 0 auto;
-    width: 100px;
-    transition: ease-in .7s; }
-  .subscribe-form:hover hr {
-    width: 300px; }
+    .subscribe-form__btn:hover {
+      cursor: pointer;
+      color: #333;
+      border-color: #333; }
