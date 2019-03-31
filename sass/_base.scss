@@ -66,6 +66,11 @@ body.active {
 }
 
 //TRANSITION IMAGES
+.transition-box {
+  @media screen and (min-width: $bp-lg) {
+    animation: rotating 10s linear infinite;
+  }
+}
 .transition-img {
   width: 120px;
   height: 120px;

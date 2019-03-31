@@ -38,7 +38,7 @@
      outline: none;
    }
 
-   @media screen and (min-width: $bp-md) {
+   @media screen and (min-width: $bp-lg) {
      &:hover {
        animation: logoAnimated 2s infinite;
      }
@@ -546,6 +546,7 @@
        left: 10%;
        top: 25%;
        transform: rotate(-40deg);
+       animation: blink 2s infinite;
      }
    }
 
