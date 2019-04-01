@@ -167,7 +167,8 @@
 
  .navbar__dropdown-item {
    padding: .75rem 2rem .75rem 1rem;
-   color: $color-dark;
+   color: $color-secondary;
+   font-weight: 500;
    font-size: .9rem;
 
    &:hover {
@@ -271,16 +272,15 @@
      background-color: $color-pink;
    }
  }
- 
+
  .secondary-btn {
-   color: $color-pink;
-   background-color: $color-main;
-   border: 1px solid $color-pink;
+   color: $color-main;
+   background-color: $color-pink-light;
 
    &:hover {
-    color: $color-main;
-    background-color: $color-pink;
-    border-color: $color-pink;
+     color: $color-main;
+     background-color: $color-pink;
+     border-color: $color-pink;
    }
  }
 
@@ -290,7 +290,7 @@
 
    &__container {
      text-align: center;
-     padding: 5rem .5rem;
+     padding: 5rem 1rem 6rem ;
    }
 
    &__title {
@@ -325,10 +325,10 @@
    background-color: white;
    text-transform: none;
    padding: 3rem 0;
-   padding-top: 5rem;
+   padding-top: 6rem;
 
    &__container {
-     padding: 0 .5rem;
+     padding: 0 1rem;
    }
 
    &__title {
@@ -427,8 +427,9 @@
      border-radius: 4px;
      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
      transition: transform .5s;
+
      &:hover {
-      transform: scale(1.05);
+       transform: scale(1.05);
      }
 
      &:not(:last-child) {
@@ -479,7 +480,7 @@
 
  .products {
    padding: 3rem 0;
-   padding-top: 5rem;
+   padding-top: 6rem;
  }
 
  .products__text {
@@ -513,10 +514,12 @@
 
  /* ------------ SUBSCRIBE FORM ------------ */
  .subscribe {
-  position: relative;
-  padding: 3rem 0;
-  margin-bottom: 3rem;
-  background-color: $color-pink-light;
+   position: relative;
+   padding: 1.5rem 0;
+   background-color: $color-pink-light;
+   @media screen and (min-width: $bp-lg) {
+    padding: 3rem 0;
+   }
  }
 
  .subscribe-form {
@@ -536,9 +539,6 @@
      font-weight: 800;
      color: $color-secondary;
      margin-bottom: 1rem;
-/*      left: 5%;
-     top: 25%; */
-     //transform: rotate(-30deg);
 
      @media screen and (min-width: $bp-lg) {
        position: absolute;
@@ -550,22 +550,31 @@
      }
    }
 
+   &__content-box {
+     display: flex;
+   }
+
    &__subtitle {
-     font-size: 1.15rem;
+     text-transform: uppercase;
+     font-weight: 500;
+     font-size: .9rem;
      color: white;
    }
 
    &__group {
      display: flex;
      justify-content: center;
-     margin-bottom: 2rem;
+     margin-bottom: 0;
+     @media screen and (min-width: $bp-lg) {
+      margin-bottom: 2rem;
+     }
    }
 
    &__input {
      font-family: inherit;
      font-size: .9rem;
      padding: .5rem;
-     border: 2px solid $color-pink;
+     border: 2px solid $color-pink-light;
      margin-right: .5rem;
 
      &:focus {
@@ -580,36 +589,123 @@
    }
 
    &__hr {
+     display: none;
      background-color: $color-main;
      margin-bottom: 0;
      transition: width .5s;
+     @media screen and (min-width: $bp-lg) {
+      display: block;
+     }
    }
 
    &:hover .subscribe-form__hr {
-    width: 300px;
-    color: $color-main;
+     width: 300px;
+     color: $color-main;
    }
 
    &__btn {
      font-family: inherit;
-     font-size: .8rem;
-     font-weight: 800;
+     font-size: .9rem;
+     border-radius: 4px;
+     font-weight: 500;
      text-transform: uppercase;
-     background-color: $color-pink;
+     background-color: $color-pink-light;
      color: $color-main;
      border: 2px solid $color-main;
      padding: 1rem 2rem;
 
      &:hover {
        cursor: pointer;
-       color: $color-secondary;
-       border-color: $color-secondary;
+       color: $color-pink-light;
+       border-color: $color-main;
+       background-color: $color-main;
      }
    }
 
  }
 
+ /* ------------ CTA SECTION  ------------ */
+ .cta {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-color: $color-pink-light;
 
-.bold {
-  color: red;
-}
+   @media screen and (min-width: $bp-md) {
+     flex-direction: row;
+   }
+
+   &__img {
+     max-width: 100%;
+     height: auto;
+     min-height: 300px;
+     background-image: url(../img/goat-1.jpg);
+     background-size: cover;
+     background-position: 50% 65%;
+     background-repeat: no-repeat;
+
+     @media screen and (min-width: $bp-md) {
+       width: 60%;
+     }
+   }
+
+   &__content {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     color: white;
+     padding: 2rem 1rem 2rem 1rem;
+
+     @media screen and (min-width: $bp-md) {
+       width: 50%;
+     }
+   }
+
+   &__subtitle {
+     text-transform: uppercase;
+     font-size: .8rem;
+     font-weight: 700;
+     letter-spacing: 1px;
+   }
+
+   &__title {
+     text-transform: uppercase;
+     font-weight: 800;
+     letter-spacing: 1px;
+     margin-top: .2rem;
+     margin-bottom: 1rem;
+   }
+
+   &__text {
+     line-height: 1.6rem;
+     max-width: 480px;
+   }
+
+   &__btn {
+     color: $color-main;
+     border: 2px solid $color-main;
+     background-color: $color-pink-light;
+     margin-right: auto;
+     margin-top: 1.5rem;
+     margin-bottom: 0;
+
+     &:hover {
+       color: $color-pink;
+       background-color: $color-main;
+       border-color: $color-main;
+     }
+   }
+
+   &__transition {
+    @media screen and (min-width: $bp-md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: url(../img/color-transition.png);
+      background-repeat: no-repeat;
+      width: 227px;
+      height: 100%;
+     }
+   }
+ }
