@@ -712,16 +712,6 @@
    text-align: center;
    background-color: $color-grey;
 
-   &__pattern {
-     position: absolute;
-     top: 0;
-     transform: translateY(-100%);
-     background-image: url(../img/triangle-pattern.svg);
-     width: 100%;
-     height: 15px;
-     min-height: 10px;
-   }
-
    &__logo {
     padding: .2rem .5rem;
     margin: 1rem;
