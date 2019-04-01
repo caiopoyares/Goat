@@ -132,15 +132,6 @@ body.active {
   .transition-img-2 {
     transform: translate(-50%, -60px) rotate(180deg); }
 
-/* --------- SUMARIO ---------
-  NAVBAR
-  HEADER
-  SUBSCRIBE FORM
-  
- 
- 
- 
- */
 /* ------------ NAVBAR ------------ */
 .navigation {
   position: absolute;
@@ -408,6 +399,71 @@ body.active {
       margin-right: .5rem;
       transition: .5s; }
 
+/* ------------ CTA SECTION  ------------ */
+.cta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ff7da6; }
+  @media screen and (min-width: 750px) {
+    .cta {
+      flex-direction: row; } }
+  .cta__img {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-image: url(../img/goat-1.jpg);
+    background-size: cover;
+    background-position: 50% 65%;
+    background-repeat: no-repeat; }
+    @media screen and (min-width: 750px) {
+      .cta__img {
+        width: 60%; } }
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    padding: 2rem 1rem 2rem 1rem; }
+    @media screen and (min-width: 750px) {
+      .cta__content {
+        width: 50%; } }
+  .cta__subtitle {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px; }
+  .cta__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: .2rem;
+    margin-bottom: 1rem; }
+  .cta__text {
+    line-height: 1.6rem;
+    max-width: 480px; }
+  .cta__btn {
+    color: #ffe926;
+    border: 2px solid #ffe926;
+    background-color: #ff7da6;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0; }
+    .cta__btn:hover {
+      color: #ff6a9c;
+      background-color: #ffe926;
+      border-color: #ffe926; }
+  @media screen and (min-width: 750px) {
+    .cta__transition {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background-image: url(../img/color-transition.png);
+      background-repeat: no-repeat;
+      width: 227px;
+      height: 100%; } }
+
 /* ------------ PRICING SECTION ------------ */
 .planos {
   padding-top: 3rem;
@@ -537,7 +593,6 @@ body.active {
 
 /* ------------ SUBSCRIBE FORM ------------ */
 .subscribe {
-  position: relative;
   padding: 1.5rem 0;
   background-color: #ff7da6; }
   @media screen and (min-width: 999px) {
@@ -545,10 +600,15 @@ body.active {
       padding: 3rem 0; } }
 
 .subscribe-form {
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
   padding: 0 1rem;
+  padding-bottom: 1rem;
   text-align: center; }
+  @media screen and (min-width: 999px) {
+    .subscribe-form {
+      padding-bottom: 0; } }
   .subscribe-form__title {
     font-size: 2.5rem;
     padding: .2rem .5rem;
@@ -563,10 +623,11 @@ body.active {
     @media screen and (min-width: 999px) {
       .subscribe-form__title {
         position: absolute;
-        font-size: 3.25rem;
-        left: 10%;
-        top: 25%;
-        transform: rotate(-40deg);
+        font-size: 3.5rem;
+        left: 0%;
+        z-index: 1;
+        top: 10%;
+        transform: translateX(-70%) rotate(-30deg);
         animation: blink 2s infinite; } }
   .subscribe-form__content-box {
     display: flex; }
@@ -620,67 +681,33 @@ body.active {
       border-color: #ffe926;
       background-color: #ffe926; }
 
-/* ------------ CTA SECTION  ------------ */
-.cta {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #ff7da6; }
-  @media screen and (min-width: 750px) {
-    .cta {
-      flex-direction: row; } }
-  .cta__img {
-    max-width: 100%;
-    height: auto;
-    min-height: 300px;
-    background-image: url(../img/goat-1.jpg);
-    background-size: cover;
-    background-position: 50% 65%;
-    background-repeat: no-repeat; }
-    @media screen and (min-width: 750px) {
-      .cta__img {
-        width: 60%; } }
-  .cta__content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    color: white;
-    padding: 2rem 1rem 2rem 1rem; }
-    @media screen and (min-width: 750px) {
-      .cta__content {
-        width: 50%; } }
-  .cta__subtitle {
-    text-transform: uppercase;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: 1px; }
-  .cta__title {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-top: .2rem;
-    margin-bottom: 1rem; }
-  .cta__text {
-    line-height: 1.6rem;
-    max-width: 480px; }
-  .cta__btn {
-    color: #ffe926;
-    border: 2px solid #ffe926;
-    background-color: #ff7da6;
+/* ------------- FOOTER -------------- */
+.footer {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: #f7f7f7; }
+  .footer__pattern {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    background-image: url(../img/triangle-pattern.svg);
+    width: 100%;
+    height: 15px;
+    min-height: 10px; }
+  .footer__logo {
+    padding: .2rem .5rem;
+    margin: 1rem;
+    display: inline-block;
+    background-color: none;
     margin-right: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 0; }
-    .cta__btn:hover {
-      color: #ff6a9c;
-      background-color: #ffe926;
-      border-color: #ffe926; }
-  @media screen and (min-width: 750px) {
-    .cta__transition {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateX(-100%);
-      background-image: url(../img/color-transition.png);
-      background-repeat: no-repeat;
-      width: 227px;
-      height: 100%; } }
+    color: #333;
+    border: 2px solid #333;
+    font-weight: 900;
+    font-size: 1.5rem; }
+  .footer__name {
+    color: #ff6a9c;
+    font-weight: 500; }
+  .footer__text {
+    font-size: .8rem; }

@@ -1,15 +1,5 @@
- /* --------- SUMARIO ---------
-  NAVBAR
-  HEADER
-  SUBSCRIBE FORM
-  
- 
- 
- 
- */
 
-
- /* ------------ NAVBAR ------------ */
+/* ------------ NAVBAR ------------ */
  .navigation {
    position: absolute;
    width: 100%;
@@ -355,8 +345,93 @@
        transition: .5s;
      }
    }
-
  }
+
+ /* ------------ CTA SECTION  ------------ */
+ .cta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-pink-light;
+
+  @media screen and (min-width: $bp-md) {
+    flex-direction: row;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-image: url(../img/goat-1.jpg);
+    background-size: cover;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $bp-md) {
+      width: 60%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    padding: 2rem 1rem 2rem 1rem;
+
+    @media screen and (min-width: $bp-md) {
+      width: 50%;
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    line-height: 1.6rem;
+    max-width: 480px;
+  }
+
+  &__btn {
+    color: $color-main;
+    border: 2px solid $color-main;
+    background-color: $color-pink-light;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+
+    &:hover {
+      color: $color-pink;
+      background-color: $color-main;
+      border-color: $color-main;
+    }
+  }
+
+  &__transition {
+   @media screen and (min-width: $bp-md) {
+     position: absolute;
+     top: 0;
+     left: 0;
+     transform: translateX(-100%);
+     background-image: url(../img/color-transition.png);
+     background-repeat: no-repeat;
+     width: 227px;
+     height: 100%;
+    }
+  }
+}
 
  /* ------------ PRICING SECTION ------------ */
  .planos {
@@ -514,7 +589,6 @@
 
  /* ------------ SUBSCRIBE FORM ------------ */
  .subscribe {
-   position: relative;
    padding: 1.5rem 0;
    background-color: $color-pink-light;
    @media screen and (min-width: $bp-lg) {
@@ -523,10 +597,15 @@
  }
 
  .subscribe-form {
+   position: relative;
    max-width: 500px;
    margin: 0 auto;
    padding: 0 1rem;
+   padding-bottom: 1rem;
    text-align: center;
+   @media screen and (min-width: $bp-lg) {
+     padding-bottom: 0;
+   }
 
    &__title {
      font-size: 2.5rem;
@@ -542,10 +621,11 @@
 
      @media screen and (min-width: $bp-lg) {
        position: absolute;
-       font-size: 3.25rem;
-       left: 10%;
-       top: 25%;
-       transform: rotate(-40deg);
+       font-size: 3.5rem;
+       left: 0%;
+       z-index: 1;
+       top: 10%;
+       transform: translateX(-70%) rotate(-30deg);
        animation: blink 2s infinite;
      }
    }
@@ -624,88 +704,42 @@
 
  }
 
- /* ------------ CTA SECTION  ------------ */
- .cta {
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-   background-color: $color-pink-light;
+ /* ------------- FOOTER -------------- */
+ .footer {
+   position: relative;
+   padding-top: 3rem;
+   padding-bottom: 2rem;
+   text-align: center;
+   background-color: $color-grey;
 
-   @media screen and (min-width: $bp-md) {
-     flex-direction: row;
+   &__pattern {
+     position: absolute;
+     top: 0;
+     transform: translateY(-100%);
+     background-image: url(../img/triangle-pattern.svg);
+     width: 100%;
+     height: 15px;
+     min-height: 10px;
    }
 
-   &__img {
-     max-width: 100%;
-     height: auto;
-     min-height: 300px;
-     background-image: url(../img/goat-1.jpg);
-     background-size: cover;
-     background-position: 50% 65%;
-     background-repeat: no-repeat;
-
-     @media screen and (min-width: $bp-md) {
-       width: 60%;
-     }
+   &__logo {
+    padding: .2rem .5rem;
+    margin: 1rem;
+    display: inline-block;
+    background-color: none;
+    margin-right: auto;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    font-weight: 900;
+    font-size: 1.5rem;
    }
 
-   &__content {
-     display: flex;
-     flex-direction: column;
-     position: relative;
-     color: white;
-     padding: 2rem 1rem 2rem 1rem;
-
-     @media screen and (min-width: $bp-md) {
-       width: 50%;
-     }
-   }
-
-   &__subtitle {
-     text-transform: uppercase;
-     font-size: .8rem;
-     font-weight: 700;
-     letter-spacing: 1px;
-   }
-
-   &__title {
-     text-transform: uppercase;
-     font-weight: 800;
-     letter-spacing: 1px;
-     margin-top: .2rem;
-     margin-bottom: 1rem;
+   &__name {
+     color: $color-pink;
+     font-weight: 500;
    }
 
    &__text {
-     line-height: 1.6rem;
-     max-width: 480px;
-   }
-
-   &__btn {
-     color: $color-main;
-     border: 2px solid $color-main;
-     background-color: $color-pink-light;
-     margin-right: auto;
-     margin-top: 1.5rem;
-     margin-bottom: 0;
-
-     &:hover {
-       color: $color-pink;
-       background-color: $color-main;
-       border-color: $color-main;
-     }
-   }
-
-   &__transition {
-    @media screen and (min-width: $bp-md) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translateX(-100%);
-      background-image: url(../img/color-transition.png);
-      background-repeat: no-repeat;
-      width: 227px;
-      height: 100%;
-     }
+     font-size: .8rem;
    }
  }
