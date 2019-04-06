@@ -1,30 +1,27 @@
-const UI = (function () {
-  const DOMStrings = {
-    mobileNavbar: document.querySelector('.mobile-button')
-  }
+"use strict";
 
+var UI = function () {
   return {
-    showMobileNavbar: function() {
+    showMobileNavbar: function showMobileNavbar() {
       document.querySelector('body').classList.add('active');
     },
-    closeMobileNavbar: function() {
+    closeMobileNavbar: function closeMobileNavbar() {
       document.querySelector('body').classList.remove('active');
     }
-  }
-})();
+  };
+}();
 
-const controller = (function (ui) {
-
-  const loadEventListeners = () => {
+var controller = function (ui) {
+  var loadEventListeners = function loadEventListeners() {
     document.querySelector('.mobile-button').addEventListener('click', ui.showMobileNavbar);
     document.querySelector('.close-menu-btn').addEventListener('click', ui.closeMobileNavbar);
-  }
+  };
 
   return {
-    init: function () {
+    init: function init() {
       loadEventListeners();
     }
-  }
-})(UI);
+  };
+}(UI);
 
-controller.init()
+controller.init();

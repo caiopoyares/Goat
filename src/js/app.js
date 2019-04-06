@@ -1,20 +1,15 @@
-const UI = (function () {
-  const DOMStrings = {
-    mobileNavbar: document.querySelector('.mobile-button')
-  }
-
+const UI = (() => {
   return {
-    showMobileNavbar: function() {
+    showMobileNavbar: () => {
       document.querySelector('body').classList.add('active');
     },
-    closeMobileNavbar: function() {
+    closeMobileNavbar: () => {
       document.querySelector('body').classList.remove('active');
     }
   }
 })();
 
-const controller = (function (ui) {
-
+const controller = ((ui) => {
   const loadEventListeners = () => {
     document.querySelector('.mobile-button').addEventListener('click', ui.showMobileNavbar);
     document.querySelector('.close-menu-btn').addEventListener('click', ui.closeMobileNavbar);
@@ -27,4 +22,4 @@ const controller = (function (ui) {
   }
 })(UI);
 
-controller.init()
+controller.init();
