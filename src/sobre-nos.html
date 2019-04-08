@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>Contato | Goat Project</title>
+  <title>Sobre Nós | Goat Project</title>
 </head>
 
 <body>
@@ -27,6 +27,7 @@
           <button class="close-menu-btn">&times;</button>
           <ul class="mobile-menu__list">
             <li class="mobile-menu__item"><a href="index.html">Home</a></li>
+            <li class="mobile-menu__item"><a class="item-current" href="sobre-nos.html">Sobre</a></li>
             <li class="mobile-menu__item"><a href="#">Serviços</a>
               <ul class="mobile-menu__dropdown">
                 <li class="dropdown__item"><a href="#">Serviço 1</a></li>
@@ -35,7 +36,7 @@
               </ul>
             </li>
             <li class="mobile-menu__item"><a href="#">Equipe</a></li>
-            <li class="mobile-menu__item"><a class='item-current' href="contact.html">Contato</a></li>
+            <li class="mobile-menu__item"><a href="contact.html">Contato</a></li>
           </ul>
         </aside>
 
@@ -44,7 +45,7 @@
           <a href="index.html">
             <li class="navbar__items">Home</li>
           </a>
-          <a href="sobre-nos.html">
+          <a class="item-current" href="sobre-nos.html">
             <li class="navbar__items">Sobre</li>
           </a>
           <li class="navbar__items navbar__items--drop"><a href="#">Produtos</a><i class="fas fa-caret-down"></i>
@@ -73,7 +74,7 @@
               </a>
             </ul>
           </li>
-          <a class='item-current' href="contact.html">
+          <a href="contact.html">
             <li class="navbar__items">Contato</li>
           </a>
         </ul>
@@ -82,37 +83,25 @@
     <div class="waves-pattern"></div>
   </header>
 
-
-  <!-- CONTACT FORM SECTION -->
-  <section class="contact">
-    <div class="contact__text">
-      <h2 class="contact__title">Alguma dúvida?</h2>
-      <h3 class="contact__subtitle">nos mande um olá.</h3>
-      <p class="contact__description">Fique a vontade para tirar suas dúvidas, nos conhecer melhor e enviar sugestões e
-        críticas. Estamos sempre abertos para aprender e melhorar.</p>
-      <div class="contact__icons">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-instagram"></i>
+  <!-- QUEM SOMOS SECTION -->
+  <section class="quem-somos">
+    <img class="sobre__img" src="img/goat-shadow.svg" alt="Goat shadow">
+    <div class="sobre">
+      <div class="sobre__title-box">
+        <i class="far fa-user-circle"></i>
+        <h1 class=" sobre__title">Quem somos</h1>
       </div>
-    </div>
-    <div class="contact__form">
-      <form class="form">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="E-mail" required>
-        <div>
-          <select name="contact" id="contact-type">
-            <option value="duvida">Dúvida</option>
-            <option value="reclamacao">Reclamação</option>
-            <option value="elogio">Elogio</option>
-            <option value="outro">Outro</option>
-          </select>
-          <i class="fas fa-sort-down "></i>
-        </div>
-        <textarea name="message" id="contact-message" cols="30" rows="7" placeholder="Mensagem"></textarea>
-        <input class="btn secondary-btn" type="submit" placeholder="Enviar" required>
-      </form>
+      <div class="sobre__description-box">
+        <h4 class="sobre__subtitle">A Goat é constituída por um grupo de pessoas apaixonadas por criar o
+          melhor ambiente para o seu animal.</h4>
+        <p class="sobre__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas
+          voluptates minima accusantium possimus eos quam corrupti quia. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Fuga, ipsam.</p>
+        <p class="sobre__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          voluptates minima accusantium possimus eos quam corrupti quia, qui quidem
+          voluptas harum ad porro itaque culpa.</p>
+        <p class="sobre__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur.</p>
+      </div>
     </div>
   </section>
 

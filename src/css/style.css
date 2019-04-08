@@ -107,6 +107,11 @@ a {
   background-color: #ff6a9c;
   color: #ffe926; }
 
+.fa-user-circle {
+  color: #fff0ca;
+  margin-left: 1.5rem;
+  font-size: 6rem; }
+
 body {
   transform: translateX(0px);
   transition: transform .7s; }
@@ -832,3 +837,69 @@ NEWSLETTER SECTION
     font-size: 1rem;
     border: 1px solid #777;
     width: 100%; }
+  .form input[type=submit] {
+    padding: .7rem; }
+
+/* SECTION QUEM SOMOS */
+.quem-somos {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 1rem;
+  padding-top: 5rem; }
+
+.sobre {
+  max-width: 900px;
+  display: block;
+  position: relative;
+  z-index: 5;
+  padding-bottom: 6rem; }
+  @media screen and (min-width: 850px) {
+    .sobre {
+      padding-left: 3rem; } }
+  @media screen and (min-width: 999px) {
+    .sobre {
+      padding-left: 10%; } }
+  .sobre__title-box {
+    order: 2;
+    margin-bottom: .5rem; }
+  .sobre__title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #333; }
+  .sobre__description-box {
+    order: 1;
+    max-width: 500px; }
+  .sobre__subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    font-weight: 600;
+    line-height: 2rem;
+    max-width: 400px; }
+  .sobre__description {
+    margin-top: 1rem;
+    line-height: 1.6rem; }
+  @media screen and (min-width: 750px) {
+    .sobre__img-box {
+      width: 100%; } }
+  .sobre__img {
+    display: none;
+    width: 100px; }
+    @media screen and (min-width: 750px) {
+      .sobre__img {
+        position: absolute;
+        width: 500px;
+        display: block;
+        top: 0;
+        right: 0;
+        transform: rotateY(180deg) translate(-35%, 25%); } }
+    @media screen and (min-width: 850px) {
+      .sobre__img {
+        width: 600px; } }
+    @media screen and (min-width: 999px) {
+      .sobre__img {
+        width: 700px; } }
+    @media screen and (min-width: 1200px) {
+      .sobre__img {
+        width: 900px;
+        transform: translate(35%, -10%); } }
