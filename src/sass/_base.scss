@@ -65,7 +65,7 @@ body.active {
   overflow: hidden;
 }
 
-//TRANSITION IMAGES
+//TRANSITIONS AND PATTERNS
 .transition-box {
   @media screen and (min-width: $bp-lg) {
     animation: rotating 10s linear infinite;
@@ -80,5 +80,14 @@ body.active {
 
   &-2 {
     transform: translate(-50%, -60px) rotate(180deg);
+  }
+}
+
+.waves-pattern {
+  height: 50px;
+  width: 100%;
+  background-image: url('../img/waves-pattern.svg');
+  @media screen and (min-width: $bp-lg) {
+    transform: translateY(-15px);
   }
 }

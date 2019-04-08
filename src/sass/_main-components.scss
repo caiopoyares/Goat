@@ -1,0 +1,341 @@
+ /* 
+ ALL SECTIONS
+ NAVBAR
+ HEADER
+ BUTTONS
+ FOOTER
+  */
+ 
+ 
+ /* ------------ ALL SECTIONS ------------ */
+ .section-title {
+  font-family: $font-display;
+  text-align: center;
+  color: $color-secondary;
+  padding: 0 0 .5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+/* ------------ NAVBAR ------------ */
+ .navigation {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   z-index: 10;
+
+   &-secondary {
+     position: relative;
+     background-color: #fff0ca;
+
+   }
+ }
+
+ .nav {
+  display: flex;
+  padding: 0 10px;
+  color: white;
+  background-color: transparent;
+
+ }
+ 
+
+ .nav__logo {
+  display: flex;
+  margin-left: 1rem;
+  align-items: center;
+  margin-right: auto;
+  color: $color-pink;
+  font-weight: 900;
+  font-size: 1.5rem;
+
+   &-white {
+     color: white;
+   }
+
+   &:focus {
+     outline: none;
+   }
+
+   @media screen and (min-width: $bp-lg) {
+     &:hover {
+       animation: logoAnimated .3s infinite;
+     }
+   }
+ }
+
+ .mobile-button {
+   display: flex;
+   align-items: center;
+   margin-top: 1rem;
+
+   @media screen and (min-width: $bp-md) {
+     display: none;
+   }
+
+   .fa-bars {
+     cursor: pointer;
+     font-size: 1.75rem;
+     padding: 0 .5rem 0 .5rem;
+
+     &-secondary {
+       color: $color-pink;
+     }
+   }
+ }
+
+
+ .sidebar-menu {
+   position: fixed;
+   overflow-y: auto;
+   z-index: 5;
+   top: 0;
+   left: -250px;
+   width: 250px;
+   height: 100%;
+   background-color: $color-pink;
+ }
+
+ .mobile-menu__list {
+   font-weight: 500;
+   margin-left: .5rem;
+   padding-top: 1rem;
+ }
+
+ .mobile-menu__item {
+   padding: 1rem;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+
+   & a:hover,
+     {
+     cursor: pointer;
+     color: $color-main;
+   }
+ }
+
+ .mobile-menu__dropdown {
+   margin-top: .5rem;
+   margin-left: 1rem;
+ }
+
+ .dropdown__item {
+   padding: .5rem;
+ }
+
+ .close-menu-btn {
+   cursor: pointer;
+   font-size: 2rem;
+   border: none;
+   position: absolute;
+   right: 5px;
+   top: 0;
+   background: transparent;
+   color: white;
+   transition: all .2s;
+
+   &:focus {
+     outline: none;
+   }
+ }
+
+ .desktop-navbar {
+   display: none;
+   font-weight: 500;
+
+   @media screen and (min-width: $bp-md) {
+     display: block;
+   }
+ }
+
+ .navbar__items {
+   display: inline-block;
+   padding: 1rem;
+   text-transform: uppercase;
+   cursor: pointer;
+
+   &:hover {
+     color: rgba(255, 255, 255, .5);
+   }
+
+   &:nth-child(2),
+   &:nth-child(3) {
+     position: relative;
+   }
+ }
+
+ .navbar__items--drop {
+   position: relative;
+   z-index: 10;
+ }
+
+ .navbar__items--drop:hover .navbar__dropdown,
+ .navbar__items--drop:hover .navbar__dropdown {
+   visibility: visible;
+   opacity: 1;
+   transform: translateY(0);
+ }
+
+ .navbar__dropdown {
+   position: absolute;
+   background-color: #fff;
+   //border: 2px solid $color-pink;
+   min-width: max-content;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+   border-radius: 3px;
+   top: 100%;
+   visibility: hidden;
+   opacity: 0;
+   transform: translateY(-1.5rem);
+   transition: opacity .4s, transform .4s ease-out;
+ }
+
+ .navbar__dropdown-item {
+   padding: .75rem 2rem .75rem 1rem;
+   color: $color-secondary;
+   font-weight: 500;
+   font-size: .9rem;
+
+   &:hover {
+     background-color: $color-pink;
+     color: white;
+   }
+ }
+
+ .navigation-secondary .navbar__items {
+   color: $color-pink;
+   &:hover {
+     color: pink;
+   }
+   & .item-current {
+     color: pink;
+   }
+ }
+
+ /* ------------ HEADER ------------ */
+
+ .header {
+   position: relative;
+
+   &__container {
+     height: 70vh;
+     width: 100%;
+     background-image: linear-gradient(to top, #f7f7f7 0, hsla(0, 0%, 97%, 0.534) 15%, hsla(0, 0%, 97%, 0.308) 20%, transparent 25%), url('../img/hero-img.jpg');
+     background-repeat: no-repeat;
+     background-position: 50% 26%;
+     background-size: cover;
+   }
+ }
+
+
+ .header__content {
+   border-radius: 4px;
+   padding: 1rem 1rem;
+   font-weight: lighter;
+   position: absolute;
+   text-align: center;
+   color: white;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .header__pre-title {
+   font-size: 1.5rem;
+   letter-spacing: 2px;
+   color: $color-main;
+   text-transform: uppercase;
+   font-weight: 900;
+ }
+
+ .header__title {
+   color: white;
+   font-weight: 900;
+   font-size: 5rem;
+   line-height: 5rem;
+   text-transform: uppercase;
+ }
+
+ .header__subtitle {
+   text-transform: capitalize;
+   font-size: 1.15rem;
+   font-weight: 300;
+ }
+
+ .current {
+   opacity: 1;
+ }
+
+ /* ------------ BUTTONS ------------ */
+ .btn {
+   font-weight: 400;
+   font-size: .9rem;
+   font-family: inherit;
+   border-radius: 4px;
+   border: none;
+   margin: 1rem 0;
+   padding: .7rem 2rem;
+   text-transform: uppercase;
+   transition: .1s;
+ }
+
+ .btn.primary-btn {
+   color: $color-pink;
+   background-color: none;
+   border: 1px solid $color-pink;
+
+   &:hover {
+     color: $color-main;
+     background-color: $color-pink;
+   }
+ }
+
+ .btn.secondary-btn {
+   color: $color-main;
+   background-color: $color-pink-light;
+   border: none;
+
+   &:hover {
+     color: $color-main;
+     background-color: $color-pink;
+     border-color: $color-pink;
+   }
+ }
+
+ /* ------------- FOOTER -------------- */
+ .footer {
+   position: relative;
+   padding-top: 3rem;
+   padding-bottom: 2rem;
+   text-align: center;
+   background-color: $color-grey;
+
+   &__logo {
+    padding: .2rem .5rem;
+    margin: 1rem;
+    display: inline-block;
+    background-color: none;
+    margin-right: auto;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    font-weight: 900;
+    font-size: 1.5rem;
+   }
+
+   &__name {
+     color: $color-pink;
+     font-weight: 500;
+   }
+
+   &__text {
+     font-size: .8rem;
+   }
+ }

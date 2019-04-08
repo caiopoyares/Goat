@@ -1,19 +1,13 @@
 @keyframes logoAnimated {
   0% {
-    background-color: $color-pink-light;
-    color: $color-main;
-    transform: scale(1);
+    color: $color-pink;
   }
   50% {
-    background-color: $color-main;
-    color: $color-pink-light;
-    border-color: $color-pink-light;
-    transform: scale(1.2);
+    color: $color-main;
+
   }
   100% {
-    background-color: $color-pink-light;
-    color: $color-main;
-    transform: scale(1);
+    color: $color-pink;
   }
 }
 
