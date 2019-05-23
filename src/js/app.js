@@ -1,10 +1,10 @@
 const UI = (() => {
   return {
     showMobileNavbar: () => {
-      document.querySelector('body').classList.add('active');
+      document.querySelector('.sidebar-menu').classList.add('active');
     },
     closeMobileNavbar: () => {
-      document.querySelector('body').classList.remove('active');
+      document.querySelector('.sidebar-menu').classList.remove('active');
     }
   }
 })();

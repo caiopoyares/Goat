@@ -51,6 +51,7 @@
  .nav__logo {
   display: flex;
   margin-left: 1rem;
+  margin-top: 1rem;
   align-items: center;
   margin-right: auto;
   color: $color-pink;
@@ -63,6 +64,10 @@
 
    &:focus {
      outline: none;
+   }
+
+   @media (min-width: $bp-md) {
+     margin-top: 0;
    }
 
    @media screen and (min-width: $bp-lg) {
@@ -92,16 +97,20 @@
    }
  }
 
-
  .sidebar-menu {
    position: fixed;
-   overflow-y: auto;
    z-index: 5;
    top: 0;
    left: -250px;
    width: 250px;
    height: 100%;
    background-color: $color-pink;
+   transition: all .7s;
+ }
+
+ .sidebar-menu.active {
+   left: 0;
+   display: block;
  }
 
  .mobile-menu__list {
@@ -115,7 +124,7 @@
    text-transform: uppercase;
    letter-spacing: 1px;
 
-   & a:hover,
+   & a:hover
      {
      cursor: pointer;
      color: $color-main;
@@ -264,12 +273,12 @@
  .header__title {
    color: white;
    font-weight: 900;
-   font-size: 6rem;
-   line-height: 8rem;
+   font-size: 5rem;
+   line-height: 6rem;
    text-transform: uppercase;
 
     @media screen and (min-width: $bp-md) {
-      font-size: 8rem;
+      font-size: 7rem;
       text-shadow: 6px 6px 0 rgba($color-secondary, 0.2);
     }
   }
@@ -299,7 +308,7 @@
 
  .btn.primary-btn {
    color: $color-pink;
-   background-color: none;
+   background-color: white;
    border: 1px solid $color-pink;
 
    &:hover {
